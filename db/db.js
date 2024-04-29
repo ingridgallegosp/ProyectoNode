@@ -16,7 +16,7 @@ const connectDB = () => {
 
         // Conectar a la base de datos usando la URL proporcioanada
         mongoose
-            .connect(mongoDBURL)
+            .connect(mongoURL)
             .then(() => {
                 console.log("Conexion a la DB establecida correctamente");
               

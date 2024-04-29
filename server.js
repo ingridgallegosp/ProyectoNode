@@ -4,12 +4,13 @@
 
 const express = require('express');
 var userRoutes = require('./routes/userRoutes');
-const db = require('./db/db');
+const connectDb = require('./db/db');
 
 // crear instancia de express
 
 const app = express();
 const PORT = 3000;
+
 
 //middleware
 
@@ -19,7 +20,12 @@ app.use(express.json())
 
 //app.use('/api/users', userRoutes); //ruta /api/users
 
+//Inicializamos DB
+
+connectDb();
+
 //inicializamos
+
 app.listen(PORT, ()=> {
     console.log('corriendo en puerto: '+ PORT)
 }); //ruta /api/users
