@@ -9,7 +9,7 @@ const connectDb = require('./db/db');
 // crear instancia de express
 
 const app = express();
-const PORT = 3000;
+const PORT = 3010;
 
 
 //middleware
@@ -18,7 +18,7 @@ app.use(express.json())
 
 //rutas
 
-//app.use('/api/users', userRoutes); //ruta /api/users
+app.use('/api/users', userRoutes); //ruta /api/users
 
 //Inicializamos DB
 
