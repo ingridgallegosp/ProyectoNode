@@ -24,7 +24,7 @@ app.use(express.json())
 //11 Creamos las rutas de usuario en la ruta /api/users
 // Rutas de Autenticacion
 
-//app.use("/api/auth", authRoutes)-----------
+app.use("/api/auth/", authRoutes)
 
 // Rutas de Usuarios
 

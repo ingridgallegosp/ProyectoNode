@@ -21,10 +21,10 @@ const login = (req, res) => {
 
             // validar si coinciden las contraseñas
 
-            const match = (constraseña === user.contraseña);
+            const match = (contraseña === user.contraseña);
 
             if (!match) {
-                return res.status(401).json({ message: "Credenciales Invalidas" });
+                return res.status(401).json({ message: "Credenciales Inválidas" });
             }
             // Si las credenciales son validadas(coincide la ingresada con la registrada) vamos a crear el token
 
@@ -77,7 +77,7 @@ const login = (req, res) => {
 
 // Controlador para cerrar la sesion
 const logout = (req, res) => {
-    localStorage.removeItem('token')
+    //falta borrar el token
     res.status(200).json({ message: "Sesion cerrada exitosamente" })
 };
 
