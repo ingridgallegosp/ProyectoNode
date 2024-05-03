@@ -6,6 +6,7 @@ const User = require("../models/user");
 const AuthToken = require("../models/auth");
 const bcryptService = require("../services/bcryptService");
 
+
 // Controlador para manejar la Autenticacion de Usuarios
 
 /* const login = (req, res) => {
