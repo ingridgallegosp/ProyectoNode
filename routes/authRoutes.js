@@ -10,7 +10,7 @@ const authController = require("../controllers/authControllers");
 
 // Imoprtamos el middleware de Seguridad
 
-//const verifyToken= require("../middleware/verifyToken")
+const verifyToken= require("../middleware/verifyToken")
 
 // Rutas para al Auth del User.
 
@@ -18,8 +18,8 @@ router.post("/login", authController.login);
 
 // Ruta para cerrar Sesion
 
-router.get("/logout", authController.logout);
-//router.get("/logout", verifyToken, authController.logout);
+//router.get("/logout", authController.logout);
+router.get("/logout", verifyToken, authController.logout);
 
 
 module.exports = router;
